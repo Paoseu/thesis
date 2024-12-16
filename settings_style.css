@@ -1,0 +1,410 @@
+@font-face {
+    font-family: myFont;
+    src: url(Roboto-Black.ttf);
+    color: black;
+}
+@font-face {
+    font-family: myFont2;
+    src: url(Nunito-Black.ttf);
+    color: black;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    appearance: none;
+    border: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+html {
+    font-size: 14px;
+}
+body {
+    width: 100vw;
+    height: 100vh;
+    font-family: myFont2;
+    font-size: 0.88rem;
+    background: #f6f6f9;
+    user-select: none;
+    overflow-x: hidden;
+}
+.container {
+    display: grid;
+    width: 96%;
+    margin: 0 auto;
+    gap: 1.8rem;
+    grid-template-columns: 14rem auto 0 0;
+}
+a {
+    color: #363949;
+}
+h1 {
+    font-size: 1.8rem;
+    font-weight: 800;
+}
+h2 {
+    font-size: 1.4rem;
+    font-style: normal;
+}
+h3 {
+    font-size: 0.87rem;
+    font-style: normal;
+}
+h4 {
+    font-size: 0.4rem;
+}
+h5 {
+    font-size: 0.77rem;
+}
+aside {
+    height: 100vh;
+}
+svg .cls-1 {
+    fill: none;
+    stroke: #020202;
+}
+.top svg {
+    width: 100px;
+    height: 100px;
+    vertical-align: middle; 
+    margin-right: 10px; 
+}
+aside {
+    top: 3rem; 
+    margin-top: 2rem;
+}
+
+aside .top {
+    background: #fff;
+    display: flex;
+    left: 0;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 1.4rem;
+    padding: 1rem;
+    border-radius: 15px;
+}
+aside .close {
+    display: none;
+}
+aside .sidebar {
+    background: white;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    height: 65vh;
+    position: relative;
+    top: 1.50rem;
+    border-radius: 15px;
+}
+aside h3 {
+    font-weight: 500;
+}
+aside .sidebar a {
+    display: flex;
+    color: #7d8da1;
+    margin-left: 2rem;
+    gap: 1rem;
+    align-items: center;
+    position: relative;
+    height: 3.7rem;
+    transition: all 300ms ease;
+}
+aside .sidebar a span {
+    font-size: 1.6rem;
+    transition: all 200ms ease;
+}
+aside .sidebar a.active {
+    background: rgba(132, 139, 200, 0.18);
+    color: rgba(106, 147, 255, 1);
+    margin-left: 0;
+    width: 100%;
+    border-radius: 1rem;
+}
+aside .sidebar a.active::before {
+    content: '';
+    width: 6px;
+    height: 100%;
+    background: rgb(51, 108, 253);
+}
+aside .sidebar a.active span {
+    color: rgba(106, 147, 255, 1);
+    margin-left: calc(1rem - 3px);
+}
+aside .sidebar a:hover {
+    color: rgba(106, 147, 255, 1);
+}
+aside .sidebar a:hover span {
+    margin-left: 1rem;
+}
+
+/*---MAIN---*/
+main {
+    display: flex;
+    margin-top: 2rem;
+    width: 100%;
+    flex-wrap: wrap; 
+    justify-content: space-between; 
+    gap: 1rem;
+    margin: 1.5rem ;
+}
+.home-heading {
+    margin: 2rem 0 1rem 0;
+}
+.account-settings {
+    position: absolute;
+    margin: 80px 0 0 0;
+    display: inline-block;
+    height: 500px;
+    width: 400px;
+}
+.account-settings h3 {
+    margin: 30px 0 30px 0;
+}
+.grid-container {
+    display: flex;
+    column-gap: 400px;
+}
+input[type=text], input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+.username_input, .password_input {
+  border-radius: 15px;
+  padding: 10px;
+  border: 1px solid #ccc;
+}
+.button {
+  border-radius: 15px;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  text-align: center;
+  margin-top: 20px;
+}
+.edit-content h2{
+    margin: 80px 0 30px 0;
+}
+.edit-content h3 {
+    margin-bottom: 30px;
+}
+.edit-content {
+    height: 500px;
+    width: 400px;
+  }
+#photo, #caption {
+    border-radius: 15px;
+    padding: 10px;
+    border: 1px solid #ccc;
+}
+.edit-content form {
+    margin-top: 20px;
+}
+  
+  .edit-content textarea,
+  .edit-content input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .edit-content button {
+    border-radius: 15px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+    margin-top: 20px;
+  }
+.menu .top2 {
+    display: flex;
+    justify-content: none;
+}
+.menu .top2 button{
+    display: none;
+}
+
+/*---RESPONSIVENESS---*/
+@media screen and (max-width: 1200px) {
+     .container {
+        width: 94%;
+        grid-template-columns: repeat (7rem, 1fr);
+     }
+     aside .sidebar h3 {
+        display: none;
+     }
+     aside .sidebar a {
+        width: 5rem;
+        position: relative;
+     }
+     aside {
+        width: 70%;
+     }
+     .top h2 {
+        font-size: 12px;
+     }
+     main .grid-container {
+        grid-template-columns: 1fr;
+        gap: 70px;
+     }
+     main .charts {
+        position: relative;
+        margin: 7rem 0 0 0;
+        width: 100%;
+    }
+    main table thead tr th:last-child,
+    main table thead tr th:first-child {
+        display: none;
+    }
+    main table tbody tr td:last-child,
+    main table tbody tr td:first-child {
+        display: none;
+    }
+ }
+ 
+ @media screen and (max-width: 480px) {
+    .container {
+        width: 100%;
+    }
+    aside {
+        position: fixed;
+        left: -100%;
+        background: #fff;
+        width: 18rem;
+        z-index: 3;
+        box-shadow: 1rem 3rem 4rem rgba(132, 139, 200, 0.18);
+        height: 80vh;
+        padding-right: 1.8rem;
+        border-radius: 15px;
+        animation: showMenu 400ms ease forwards;
+   }
+   @keyframes showMenu {
+        to {
+            left: 0;
+        }
+   }
+   aside h2 {
+        display: inline;
+        margin-left: 1rem;
+   }
+   aside .sidebar h3 {
+        display: inline;
+   }
+   aside .sidebar a {
+        width: 100%;
+        height: 3.4rem;
+   }
+   aside .close {
+        display: inline-block;
+        cursor: pointer;
+   }    
+    .top svg {
+        margin-right: 5px;
+    }
+    .menu .top2 {
+        position: fixed;
+        width: 100%;
+        top: 0;
+        left: 0;
+        align-items: center;
+        padding: 0 0 0.8rem;
+        height: 4.6rem;
+        background:#fff;
+        z-index: 2;
+        box-shadow: 0 1rem 1rem rgba(132, 139, 200, 0.18);
+   }
+   .menu .top2 button {
+        display: inline-block;
+        background: transparent;
+        cursor: pointer;
+        color: #000000;
+        position: absolute;
+        left: 1rem;
+        top: 1.5rem;
+   }
+   .close {
+       position: absolute;
+       top: 10px;
+       right: 10px;
+       font-size: 30px;
+   }
+    main .grid-container {
+    margin-top: 1rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 90px;
+    }
+    main {
+    width: 160%;
+    margin-top: 6rem;
+ }
+}
+
+/* Dark mode styles */
+/* @media (prefers-color-scheme: dark) {
+    body {
+        background: black;
+        color: #e0e0e0;
+    }
+    .container {
+        background: black;
+    }
+    h1, h2, h3, h4, h5 {
+        color: white;
+    }
+    a {
+        color: black;
+    }
+    aside .top {
+        background: rgb(40, 40, 40);
+    }
+    aside .sidebar {
+        background: rgb(40, 40, 40);
+    }
+    main .cards > div {
+        background: black;
+        box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
+    }
+    .rectangle {
+        background: black;
+    }
+    .content {
+        background: rgba(0, 0, 0, 0.5);
+    }
+    .card-image {
+        filter: brightness(80%);
+    }
+    .table:after {
+        background: rgba(0, 0, 0, 0.6);
+    }
+    svg .cls-1 {
+        stroke: #f6f6f9;
+    }
+
+    .close {
+        color: white;
+    }
+
+    .colored {
+        color: white;
+    }
+    .right .top2 {
+        background: rgb(41, 41, 41);
+    }
+
+    .right .top2 button {
+        color: white;
+    }
+} */
