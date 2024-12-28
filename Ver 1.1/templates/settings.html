@@ -27,23 +27,23 @@
             </div>
             
             <div class="sidebar">
-                <a href="home.html">
+                <a href="{{ url_for('home') }}">
                     <span class="material-symbols-outlined">home</span>
                     <h3>Home</h3>
                 </a>
-                <a href="dashboard.html">
+                <a href="{{ url_for('dashboard') }}">
                     <span class="material-symbols-outlined">dashboard_2</span>
                     <h3>Dashboard</h3>
                 </a>
-                <a href="#">
+                <a href="{{ url_for('about') }}">
                     <span class="material-symbols-outlined">question_mark</span>
                     <h3>About</h3>
                 </a>
-                <a href="settings.html"  class="active">
+                <a href="{{ url_for('settings') }}" class="active">
                     <span class="material-symbols-outlined">settings</span>
                     <h3>Settings</h3>
                 </a>
-                <a href="#">
+                <a href="{{ url_for('logout') }}">
                     <span class="material-symbols-outlined">logout</span>
                     <h3>Logout</h3>
                 </a>
