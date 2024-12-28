@@ -1,1 +1,16 @@
+-------------------------DECEMBER 28, 2024------------------------
+
 RASCODE: Dae pa naset yung routing kaini. Login to Home palang naayos ko.
+
+Install nyo nalang yung venv ning flask sa vscode niyo gamit ning terminal ning vscode.
+1. Install muna python sa python.org kung dae pa kamo
+2. Open niyo terminal ning vscode, 
+      python -m venv venv 
+or
+      python3 -m venv venv
+3. Activate virtual environment.
+    venv\Scripts\Activate
+
+4. pip install flask
+
+--------------------------DECEMBER 28, 2024-----------------------
