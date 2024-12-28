@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../static/images/catsu logo.png" type="image/x-icon">
+    <title>Log In</title>
+    <style>
+       @font-face {
+            font-family: myFont;
+            src: url(../static/fonts/Roboto-Black.ttf);
+            color: black;
+        }
+        @font-face {
+            font-family: myFont2;
+            src: url(../static/fonts/Nunito-Black.ttf);
+            color: black;
+        }
+
+       * {
+        font-family: myFont;
+       }
+       body {
+        background-color: #f6f6f9;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 97vh;
+       }
+       .container {
+        padding: 1rem;
+       }
+       .container, .img-container, .title-container, .button-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: none;
+       }
+       input {
+        border: none;
+        border-bottom: 1px solid black;
+        font-weight: bold;
+        background: transparent;
+       }
+       .username-container, .password-container {
+        margin-bottom: 5%;
+       }
+       .username-container label, .password-container label {
+        font-size: 0.9rem;
+       }
+       .button-container {
+        margin-top: 20%;
+       }
+       button {
+        background-color: rgb(0, 170, 255);
+        color: white;
+        border: none;
+        border-radius: 10px;
+        padding: 5%;
+        cursor: pointer;
+       }
+       button:hover {
+        background-color: rgb(0, 136, 255);
+       }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <form action="{{ url_for('handle_login') }}" method="post">
+            <div class="img-container">
+                <img src="{{ url_for('static', filename='images/catsu logo.png') }}" width="150px" alt="">
+            </div>
+            <div class="title-container">
+                <h1>HealthViz</h1>
+            </div>
+            
+            <div class="username-container">
+                <div>
+                    <label for="username">Username</label>
+                </div>
+                <div>
+                    <input type="text" id="username" name="username" required>
+                </div>
+            </div>
+            <div class="password-container">
+                <div>
+                    <label for="password">Password</label>
+                </div>
+                <div>
+                    <input type="password" id="password" name="password" required>
+                </div>
+            </div>
+            <div class="button-container">
+                <button type="submit">LOG IN</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
