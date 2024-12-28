@@ -1,6 +1,8 @@
 -------------------------DECEMBER 28, 2024------------------------
 
-RASCODE: Dae pa naset yung routing kaini. Login to Home palang naayos ko.
+RASCODE: Dae pa naset yung routing kaini. Ang naayos ko palang:
+Login > Home
+Home = Dashboard
 
 Install nyo nalang yung venv ning flask sa vscode niyo gamit ning terminal ning vscode.
 1. Install muna python sa python.org kung dae pa kamo
