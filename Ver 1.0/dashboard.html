@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +8,7 @@
     <link rel="stylesheet" href="dashboard_style.css">
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
 </head>
+
 <body>
     <!--NAVIGATION BAR-->
     <div class="container">
@@ -25,25 +27,34 @@
                     <span class="material-symbols-outlined">close</span>
                 </div>
             </div>
-            
+
             <div class="sidebar">
-                <a href="home.html">
+                <a href="{{ url_for('home') }}">
                     <span class="material-symbols-outlined">home</span>
                     <h3>Home</h3>
                 </a>
-                <a href="#" class="active">
-                    <span class="material-symbols-outlined">dashboard_2</span>
-                    <h3>Dashboard</h3>
-                </a>
-                <a href="#">
+                <li class="dropdown active">
+                    <div class="title">
+                        <a href="#" class="active dashboard-link">
+                            <span class="material-symbols-outlined">dashboard_2</span>
+                            <h3>Dashboard</h3>
+                        </a>
+                    </div>
+                    <div class="submenu">
+                        <a href="#" class="link submenu-title">Dashboard</a>
+                        <a href="dashboard_masterlist.html" class="link">Masterlist</a>
+                        <a href="dashboard_deworming.html" class="link">Deworming</a>
+                    </div>
+                </li>
+                <a href="{{ url_for('about') }}">
                     <span class="material-symbols-outlined">question_mark</span>
                     <h3>About</h3>
                 </a>
-                <a href="settings.html">
+                <a href="{{ url_for('settings') }}">
                     <span class="material-symbols-outlined">settings</span>
                     <h3>Settings</h3>
                 </a>
-                <a href="#">
+                <a href="{{ url_for('logout') }}">
                     <span class="material-symbols-outlined">logout</span>
                     <h3>Logout</h3>
                 </a>
@@ -51,30 +62,6 @@
         </aside>
         <!--MAIN SECTION-->
         <main>
-            <h1 class="home-heading">School Children in San Pablo Masterlist</h1>
-            <div class="tab-titles">
-                <h2 class="tab-links active-link" onclick="opentab('page1')">Page 1</h2>
-                <h2 class="tab-links" onclick="opentab('page2')">Page 2</h2>
-                <h2 class="tab-links" onclick="opentab('page3')">Page 3</h2>
-                <h2 class="tab-links" onclick="opentab('page4')">Page 4</h2>
-                <h2 class="tab-links" onclick="opentab('page5')">Page 5</h2>
-             </div>
-
-             <div class="tab-contents active-tab" id="page1">
-                <img src="img1.png" alt="">
-            </div>
-            <div class="tab-contents" id="page2">
-                <img src="img2.png" alt="">
-            </div>
-            <div class="tab-contents" id="page3">
-                <img src="img3.png" alt="">
-            </div>
-            <div class="tab-contents" id="page4">
-                <img src="img4.png" alt="">
-            </div>
-            <div class="tab-contents" id="page5">
-                <img src="img5.png" alt="">
-            </div>
 
 
         </main>
@@ -87,7 +74,8 @@
             </div>
         </div>
     </div>
-</div>
-<script src="dashboard.js"></script>
+    </div>
+    <script src="dashboard.js"></script>
 </body>
+
 </html>
