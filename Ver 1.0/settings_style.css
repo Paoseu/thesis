@@ -165,6 +165,33 @@ aside .sidebar a:hover span {
     margin-left: 1rem;
 }
 
+.sidebar li .submenu {
+    display: none;
+    transition: all .5s ease;
+}
+
+.sidebar li.dropdown.active .submenu {
+    width: unset;
+    height: unset;
+    opacity: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 6px 6px 14px 40px;
+}
+
+.submenu .link {
+    font-size: 10px;
+    transition: all .5s ease;
+}
+
+.submenu .link:hover {
+    margin-left: 40px;
+}
+
+.submenu .submenu-title {
+    display: none;
+}
+
 
 /*---MAIN---*/
 
