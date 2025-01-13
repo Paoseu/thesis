@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="dashboard_style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+</head>
+
+<body>
+    <!--NAVIGATION BAR-->
+    <div class="container">
+        <aside>
+            <div class="top">
+                <svg width="800px" height="800px" viewBox="0 0 24 24" id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <style>.cls-1{fill:none;stroke:#020202;stroke-miterlimit:10;stroke-width:1.91px;}</style>
+                    </defs>
+                    <path class="cls-1" d="M12.26,6.51a2.64,2.64,0,0,0-2.17,1.12A2.64,2.64,0,0,0,7.92,6.51,2.55,2.55,0,0,0,5.32,9c0,3.76,4.77,5.84,4.77,5.84S14.86,12.78,14.86,9A2.55,2.55,0,0,0,12.26,6.51Z"/>
+                    <circle class="cls-1" cx="10.09" cy="10.09" r="8.59"/>
+                    <line class="cls-1" x1="22.5" y1="22.5" x2="15.82" y2="15.82"/>
+                </svg>
+                <h2> <span class="colored">Barangay Health Assessment</span></h2>
+                <div class="close" id="close-btn">
+                    <span class="material-symbols-outlined">close</span>
+                </div>
+            </div>
+
+            <div class="sidebar">
+                <a href="{{ url_for('home') }}">
+                    <span class="material-symbols-outlined">home</span>
+                    <h3>Home</h3>
+                </a>
+                <li class="dropdown active">
+                    <div class="title">
+                        <a href="#" class="active dashboard-link">
+                            <span class="material-symbols-outlined">dashboard_2</span>
+                            <h3>Dashboard</h3>
+                        </a>
+                    </div>
+                    <div class="submenu">
+                        <a href="#" class="link submenu-title">Dashboard</a>
+                        <a href="dashboard_masterlist.html" class="link">Masterlist</a>
+                        <a href="dashboard_deworming.html" class="link">Deworming</a>
+                    </div>
+                </li>
+                <a href="{{ url_for('about') }}">
+                    <span class="material-symbols-outlined">question_mark</span>
+                    <h3>About</h3>
+                </a>
+                <a href="{{ url_for('settings') }}">
+                    <span class="material-symbols-outlined">settings</span>
+                    <h3>Settings</h3>
+                </a>
+                <a href="{{ url_for('logout') }}">
+                    <span class="material-symbols-outlined">logout</span>
+                    <h3>Logout</h3>
+                </a>
+            </div>
+        </aside>
+        <!--MAIN SECTION-->
+        <main>
+            <h1 class="home-heading">School Children in San Pablo Deworming</h1>
+            <div class="tab-titles">
+                <h2 class="tab-links active-link" onclick="opentab('page1')">Page 1</h2>
+                <h2 class="tab-links" onclick="opentab('page2')">Page 2</h2>
+            </div>
+
+            <div class="tab-contents active-tab" id="page1">
+                <img src="../static/images/img1.png" alt="">
+            </div>
+            <div class="tab-contents" id="page2">
+                <img src="../static/images/img2.png" alt="">
+            </div>
+
+
+        </main>
+        <!--menubutton-->
+        <div class="menu">
+            <div class="top2">
+                <button id="menu-btn">
+                    <span class="material-symbols-outlined">menu</span>
+                </button>
+            </div>
+        </div>
+    </div>
+    </div>
+    <script src="dashboard.js"></script>
+</body>
+
+</html>
