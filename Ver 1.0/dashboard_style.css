@@ -2,14 +2,15 @@
     font-family: myFont;
     src: url(Roboto-Black.ttf);
     color: black;
-  }
-  @font-face {
+}
+
+@font-face {
     font-family: myFont2;
     src: url(Nunito-Black.ttf);
     color: black;
-  }
-  
-  * {
+}
+
+* {
     margin: 0;
     padding: 0;
     outline: 0;
@@ -18,11 +19,13 @@
     text-decoration: none;
     list-style: none;
     box-sizing: border-box;
-  }
-  html {
+}
+
+html {
     font-size: 14px;
-  }
-  body {
+}
+
+body {
     width: 100vw;
     height: 100vh;
     font-family: myFont2;
@@ -30,54 +33,65 @@
     background: #f6f6f9;
     user-select: none;
     overflow-x: hidden;
-  }
-  .container {
+}
+
+.container {
     display: grid;
     width: 96%;
     margin: 0 auto;
     gap: 1.8rem;
     grid-template-columns: 14rem auto 0 0;
-  }
-  a {
+}
+
+a {
     color: #363949;
-  }
-  h1 {
+}
+
+h1 {
     font-size: 1.8rem;
     font-weight: 800;
-  }
-  h2 {
+}
+
+h2 {
     font-size: 1.4rem;
     font-style: normal;
-  }
-  h3 {
+}
+
+h3 {
     font-size: 0.87rem;
     font-style: normal;
-  }
-  h4 {
+}
+
+h4 {
     font-size: 0.4rem;
-  }
-  h5 {
+}
+
+h5 {
     font-size: 0.77rem;
-  }
-  aside {
+}
+
+aside {
     height: 100vh;
-  }
-  svg .cls-1 {
+}
+
+svg .cls-1 {
     fill: none;
     stroke: #020202;
-  }
-  .top svg {
+}
+
+.top svg {
     width: 100px;
     height: 100px;
-    vertical-align: middle; 
-    margin-right: 10px; 
-  }
-  aside {
-    top: 3rem; 
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
+aside {
+    top: 3rem;
     margin-top: 2rem;
-  }
-  
-  aside .top {
+}
+
+aside .top {
     background: #fff;
     display: flex;
     left: 0;
@@ -86,11 +100,13 @@
     margin-top: 1.4rem;
     padding: 1rem;
     border-radius: 15px;
-  }
-  aside .close {
+}
+
+aside .close {
     display: none;
-  }
-  aside .sidebar {
+}
+
+aside .sidebar {
     background: white;
     padding: 1.5rem;
     display: flex;
@@ -99,11 +115,13 @@
     position: relative;
     top: 1.50rem;
     border-radius: 15px;
-  }
-  aside h3 {
+}
+
+aside h3 {
     font-weight: 500;
-  }
-  aside .sidebar a {
+}
+
+aside .sidebar a {
     display: flex;
     color: #7d8da1;
     margin-left: 2rem;
@@ -112,115 +130,162 @@
     position: relative;
     height: 3.7rem;
     transition: all 300ms ease;
-  }
-  aside .sidebar a span {
+}
+
+aside .sidebar a span {
     font-size: 1.6rem;
     transition: all 200ms ease;
-  }
-  aside .sidebar a.active {
+}
+
+aside .sidebar a.active {
     background: rgba(132, 139, 200, 0.18);
     color: rgba(106, 147, 255, 1);
     margin-left: 0;
     width: 100%;
     border-radius: 1rem;
-  }
-  aside .sidebar a.active::before {
+}
+
+aside .sidebar a.active::before {
     content: '';
     width: 6px;
     height: 100%;
     background: rgb(51, 108, 253);
-  }
-  aside .sidebar a.active span {
+}
+
+aside .sidebar a.active span {
     color: rgba(106, 147, 255, 1);
     margin-left: calc(1rem - 3px);
-  }
-  aside .sidebar a:hover {
+}
+
+aside .sidebar a:hover {
     color: rgba(106, 147, 255, 1);
-  }
-  aside .sidebar a:hover span {
+}
+
+aside .sidebar a:hover span {
     margin-left: 1rem;
-  }
-  
-  /*---MAIN---*/
-  main {
+}
+
+.sidebar li .submenu {
+    display: none;
+    transition: all .5s ease;
+}
+
+.sidebar li.dropdown.active .submenu {
+    width: unset;
+    height: unset;
+    opacity: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 6px 6px 14px 40px;
+}
+
+.submenu .link {
+    font-size: 10px;
+    transition: all .5s ease;
+}
+
+.submenu .link:hover {
+    margin-left: 40px;
+}
+
+.submenu .submenu-title {
+    display: none;
+}
+
+
+/*---MAIN---*/
+
+main {
     margin-top: 2rem;
     width: 100%;
-    flex-wrap: wrap; 
-    justify-content: space-between; 
+    flex-wrap: wrap;
+    justify-content: space-between;
     gap: 1rem;
-    margin: 1.5rem ;
-  }
-  .home-heading {
+    margin: 1.5rem;
+}
+
+.home-heading {
     margin-top: 1.5rem;
-    margin-bottom: 1rem; 
-  }
-  .tab-links{
+    margin-bottom: 1rem;
+}
+
+.tab-links {
     font-size: 18px;
     cursor: pointer;
     position: relative;
-  }
-  .tab-links::after{
+}
+
+.tab-links::after {
     content: '';
     width: 0;
     color: blue;
     height: 3px;
-    background:rgb(51, 108, 253);
+    background: rgb(51, 108, 253);
     position: absolute;
     left: 0;
     bottom: -5px;
     transition: 0.5s;
-  }
-  .tab-links.active-link::after{
+}
+
+.tab-links.active-link::after {
     width: 100%;
-  }
-  .tab-titles {
+}
+
+.tab-titles {
     display: flex;
     gap: 170px;
     margin-bottom: 2rem;
-  }
-  .tab-contents{
+}
+
+.tab-contents {
     display: none;
-  }
-  .tab-contents.active-tab{
+}
+
+.tab-contents.active-tab {
     display: block;
-  }
-  main img {
+}
+
+main img {
     width: 100%;
     height: 100%;
     border-radius: 2rem;
-  }
-  .menu .top2 {
+}
+
+.menu .top2 {
     display: flex;
     justify-content: none;
-  }
-  .menu .top2 button{
+}
+
+.menu .top2 button {
     display: none;
-  }
-  
-  /*---RESPONSIVENESS---*/
-  @media screen and (max-width: 1200px) {
-     .container {
+}
+
+
+/*---RESPONSIVENESS---*/
+
+@media screen and (max-width: 1200px) {
+    .container {
         width: 94%;
         grid-template-columns: repeat (7rem, 1fr);
-     }
-     aside .sidebar h3 {
+    }
+    aside .sidebar h3 {
         display: none;
-     }
-     aside .sidebar a {
+    }
+    aside .sidebar a {
         width: 5rem;
         position: relative;
-     }
-     aside {
+    }
+    aside {
         width: 70%;
-     }
-     .top h2 {
+    }
+    .top h2 {
         font-size: 12px;
-     }
-     main .grid-container {
+    }
+    main .grid-container {
         grid-template-columns: 1fr;
         gap: 70px;
-     }
-     main .charts {
+    }
+    main .charts {
         position: relative;
         margin: 7rem 0 0 0;
         width: 100%;
@@ -233,9 +298,9 @@
     main table tbody tr td:first-child {
         display: none;
     }
-  }
-  
-  @media screen and (max-width: 480px) {
+}
+
+@media screen and (max-width: 480px) {
     .container {
         width: 100%;
     }
@@ -250,27 +315,27 @@
         padding-right: 1.8rem;
         border-radius: 15px;
         animation: showMenu 400ms ease forwards;
-   }
-   @keyframes showMenu {
+    }
+    @keyframes showMenu {
         to {
             left: 0;
         }
-   }
-   aside h2 {
+    }
+    aside h2 {
         display: inline;
         margin-left: 1rem;
-   }
-   aside .sidebar h3 {
+    }
+    aside .sidebar h3 {
         display: inline;
-   }
-   aside .sidebar a {
+    }
+    aside .sidebar a {
         width: 100%;
         height: 3.4rem;
-   }
-   aside .close {
+    }
+    aside .close {
         display: inline-block;
         cursor: pointer;
-   }    
+    }
     .top svg {
         margin-right: 5px;
     }
@@ -282,11 +347,11 @@
         align-items: center;
         padding: 0 0 0.8rem;
         height: 4.6rem;
-        background:#fff;
+        background: #fff;
         z-index: 2;
         box-shadow: 0 1rem 1rem rgba(132, 139, 200, 0.18);
-   }
-   .menu .top2 button {
+    }
+    .menu .top2 button {
         display: inline-block;
         background: transparent;
         cursor: pointer;
@@ -294,27 +359,30 @@
         position: absolute;
         left: 1rem;
         top: 1.5rem;
-   }
-   .close {
-       position: absolute;
-       top: 10px;
-       right: 10px;
-       font-size: 30px;
-   }
+    }
+    .close {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        font-size: 30px;
+    }
     main .grid-container {
-    margin-top: 1rem;
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 90px;
+        margin-top: 1rem;
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 90px;
     }
     main {
-    width: 160%;
-    margin-top: 6rem;
-  }
-  }
-  
-  /* Dark mode styles */
-  /* @media (prefers-color-scheme: dark) {
+        width: 160%;
+        margin-top: 6rem;
+    }
+}
+
+
+/* Dark mode styles */
+
+
+/* @media (prefers-color-scheme: dark) {
     body {
         background: black;
         color: #e0e0e0;
